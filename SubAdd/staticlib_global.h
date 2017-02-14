@@ -1,0 +1,12 @@
+#ifndef STATICLIB_GLOBAL_H
+#define STATICLIB_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(STATICLIB_LIBRARY)
+#  define STATICLIBSHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define STATICLIBSHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // STATICLIB_GLOBAL_H
